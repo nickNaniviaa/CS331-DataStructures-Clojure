@@ -1,0 +1,27 @@
+Grade Report for Nicolas Ribeiro Vieira
+Produced 2015-04-28 12:37
+Netid: nribeiro cwid: A20339837
+Course: cs331 (2015-01)  Section: 02
+
+                   Assignment  Status Raw Max    Norm Weight  Points 
+----------------------------- ------- --- --- ------- ------ ------- 
+                   First Exam  Graded  67  80  83.75% 0.3750 31.4063 
+             Second Exam (v1)  Graded  92  92 100.00% 0.3750 37.5000 
+                   Final Exam Pending n/a 100     n/a 0.0000  0.0000 
+                  Initial Lab Dropped 100 100 100.00% 0.0000  0.0000 
+              Linked List Lab  Graded 100 100 100.00% 0.0375  3.7500 
+                    Deque Lab  Graded 100 100 100.00% 0.0375  3.7500 
+                      BST Lab  Graded 100 100 100.00% 0.0375  3.7500 
+                     Heap Lab  Graded 100 100 100.00% 0.0375  3.7500 
+        Pre Course Assessment  Graded   1   1 100.00% 0.0125  1.2500 
+Clojure Introduction Activity  Graded   1   1 100.00% 0.0125  1.2500 
+                      Records Missing   0   1   0.00% 0.0125  0.0000 
+                    Recursion  Graded   1   1 100.00% 0.0125  1.2500 
+              Immutable Lists Pending n/a   1     n/a 0.0000  0.0000 
+                      Vectors  Graded   1   1 100.00% 0.0125  1.2500 
+          Binary Search Trees  Graded   1   1 100.00% 0.0125  1.2500 
+                   Traversals  Graded   1   1 100.00% 0.0125  1.2500 
+                        Heaps  Graded   1   1 100.00% 0.0125  1.2500 
+                     Up Trees Pending n/a   1     n/a 0.0000  0.0000 
+----------------------------- ------- --- --- ------- ------ ------- 
+                        Total                  92.66% 1.0000 92.6563 

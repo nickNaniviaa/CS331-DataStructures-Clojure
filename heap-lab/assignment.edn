@@ -1,0 +1,10 @@
+{:rubric "cs331"
+ :semester "2014-08"
+  :slug "heap-lab"
+  :title "Heap Lab"
+  :given "2014-12-02"
+  :due "2014-12-15"
+  :kind "L"
+  :category "labs"
+  :max 100
+  :order 15}

@@ -1,0 +1,182 @@
+Lab report for BST Lab - nribeiro
+Timestamp: 2015-04-07 17:54:54
+
+|  :scenario |                                                    :title |                              :result | :score |
+|------------+-----------------------------------------------------------+--------------------------------------+--------|
+|    working |                     Test student code vs instructor tests |                                 Pass |     45 |
+| qualifying |                     Test student tests vs instructor code |                                 Pass |      5 |
+|    broke-1 |                               Add doesn't increment size. | Pass: student tests detected errors. |      5 |
+|    broke-2 |                                 Add swaps left and right. | Pass: student tests detected errors. |      5 |
+|    broke-3 |                                    Find only checks left. | Pass: student tests detected errors. |      5 |
+|    broke-4 | Two child delete copies predecessor instead of moving it. | Pass: student tests detected errors. |      5 |
+|    broke-5 |                        Map tree does keys and not values. | Pass: student tests detected errors. |      5 |
+|    broke-6 |                          Delete decrements size too much. | Pass: student tests detected errors. |      5 |
+|    broke-7 |                                Delete truncates subtrees. | Pass: student tests detected errors. |      5 |
+|    broke-8 |                         Delete value doesn't always work. | Pass: student tests detected errors. |      5 |
+|    broke-9 |                    Delete value decrements size too much. | Pass: student tests detected errors. |      5 |
+|   broke-10 |                   Add sometimes increments size too much. | Pass: student tests detected errors. |      5 |
+|      total |                                               Total Score |                                      |    100 |
+
+Details:
+
+
+** Details for Test student code vs instructor tests
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.t_core, being replaced by: #'bst.core/find
+All checks (55) succeeded.
+
+
+** Details for Test student tests vs instructor code
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.t-core, being replaced by: #'bst.core/find
+All checks (32) succeeded.
+
+
+** Details for Add doesn't increment size.
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.t-core, being replaced by: #'bst.core/find
+
+FAIL "about `add` - it adds to the three properly" at (t_core.clj:40)
+    Expected: {:root {:key 25, :left , :right {:key 50, :left , :right , :value B}, :value A}, :size 2}::bst.core.BST
+      Actual: {:root {:key 25, :left , :right {:key 50, :left , :right , :value B}, :value A}, :size 1}::bst.core.BST
+
+FAIL "about `add` - it adds to the three properly" at (t_core.clj:42)
+    Expected: {:root {:key 25, :left {:key 18, :left , :right , :value C}, :right {:key 50, :left , :right , :value B}, :value A}, :size 3}::bst.core.BST
+      Actual: {:root {:key 25, :left {:key 18, :left , :right , :value C}, :right {:key 50, :left , :right , :value B}, :value A}, :size 1}::bst.core.BST
+FAILURE: 2 checks failed.  (But 30 succeeded.)
+Subprocess failed
+
+
+** Details for Add swaps left and right.
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.t-core, being replaced by: #'bst.core/find
+
+FAIL "about `add` - it adds to the three properly" at (t_core.clj:40)
+    Expected: {:root {:key 25, :left , :right {:key 50, :left , :right , :value B}, :value A}, :size 2}::bst.core.BST
+      Actual: {:root {:key 25, :left {:key 50, :left , :right , :value B}, :right , :value A}, :size 2}::bst.core.BST
+
+FAIL "about `add` - it adds to the three properly" at (t_core.clj:42)
+    Expected: {:root {:key 25, :left {:key 18, :left , :right , :value C}, :right {:key 50, :left , :right , :value B}, :value A}, :size 3}::bst.core.BST
+      Actual: {:root {:key 25, :left {:key 50, :left , :right , :value B}, :right {:key 18, :left , :right , :value C}, :value A}, :size 3}::bst.core.BST
+FAILURE: 2 checks failed.  (But 30 succeeded.)
+Subprocess failed
+
+
+** Details for Find only checks left.
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.t-core, being replaced by: #'bst.core/find
+
+FAIL "about `find` - Finds the key and shows the value" at (t_core.clj:50)
+    Expected: "B"
+      Actual: nil
+FAILURE: 1 check failed.  (But 31 succeeded.)
+Subprocess failed
+
+
+** Details for Two child delete copies predecessor instead of moving it.
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.t-core, being replaced by: #'bst.core/find
+
+FAIL "about `delete` - Delete  the node, by for the key" at (t_core.clj:71)
+    Expected: {:root {:key 99, :left {:key 38, :left {:key 20, :left , :right , :value D}, :right {:key 80, :left {:key 72, :left , :right , :value G}, :right , :value E}, :value C}, :right {:key 100, :left , :right {:key 151, :left , :right , :value B}, :value N}, :value F}, :size 6}::bst.core.BST
+      Actual: {:root {:key 99, :left {:key 38, :left {:key 20, :left , :right , :value D}, :right {:key 80, :left {:key 72, :left , :right , :value G}, :right , :value E}, :value C}, :right {:key 100, :left {:key 100, :left , :right , :value N}, :right {:key 151, :left , :right , :value B}, :value N}, :value F}, :size 6}::bst.core.BST
+
+FAIL "about `delete` - Delete  the node, by for the key" at (t_core.clj:72)
+    Expected: {:root {:key 80, :left {:key 38, :left {:key 20, :left , :right , :value D}, :right {:key 72, :left , :right , :value G}, :value C}, :right {:key 101, :left {:key 100, :left , :right , :value N}, :right {:key 151, :left , :right , :value B}, :value A}, :value E}, :size 6}::bst.core.BST
+      Actual: {:root {:key 80, :left {:key 38, :left {:key 20, :left , :right , :value D}, :right {:key 80, :left {:key 72, :left , :right , :value G}, :right , :value E}, :value C}, :right {:key 101, :left {:key 100, :left , :right , :value N}, :right {:key 151, :left , :right , :value B}, :value A}, :value E}, :size 6}::bst.core.BST
+
+FAIL "about `delete-value` - Deletes the value properly" at (t_core.clj:82)
+    Expected: {:root {:key 20, :left , :right {:key 70, :left , :right {:key 90, :left , :right , :value K}, :value I}, :value N}, :size 3}::bst.core.BST
+      Actual: {:root {:key 20, :left {:key 20, :left , :right , :value N}, :right {:key 70, :left , :right {:key 90, :left , :right , :value K}, :value I}, :value N}, :size 3}::bst.core.BST
+FAILURE: 3 checks failed.  (But 29 succeeded.)
+Subprocess failed
+
+
+** Details for Map tree does keys and not values.
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.t-core, being replaced by: #'bst.core/find
+
+FAIL "about `map-tree` - It maps a function properly" at (t_core.clj:90)
+    Expected: {:root {:key 10, :left {:key 20, :left , :right , :value 3}, :right {:key 30, :left , :right , :value 4}, :value 2}, :size 3}::bst.core.BST
+      Actual: {:root {:key 11, :left {:key 21, :left , :right , :value 2}, :right {:key 31, :left , :right , :value 3}, :value 1}, :size 3}::bst.core.BST
+
+FAIL "about `map-tree` - It maps a function properly" at (t_core.clj:91)
+    Expected: {:root {:key 10, :left {:key 20, :left , :right , :value 1}, :right {:key 30, :left , :right , :value 2}, :value 0}, :size 3}::bst.core.BST
+      Actual: {:root {:key 9, :left {:key 19, :left , :right , :value 2}, :right {:key 29, :left , :right , :value 3}, :value 1}, :size 3}::bst.core.BST
+FAILURE: 2 checks failed.  (But 30 succeeded.)
+Subprocess failed
+
+
+** Details for Delete decrements size too much.
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.t-core, being replaced by: #'bst.core/find
+
+FAIL "about `delete` - it doesnt delete if doesnt exists" at (t_core.clj:75)
+    Expected: {:root {:key 25, :left {:key 10, :left , :right , :value B}, :right {:key 80, :left , :right , :value C}, :value A}, :size 3}::bst.core.BST
+      Actual: {:root {:key 25, :left {:key 10, :left , :right , :value B}, :right {:key 80, :left , :right , :value C}, :value A}, :size 2}::bst.core.BST
+FAILURE: 1 check failed.  (But 31 succeeded.)
+Subprocess failed
+
+
+** Details for Delete truncates subtrees.
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.t-core, being replaced by: #'bst.core/find
+
+FAIL "about `delete` - Delete  the node, by for the key" at (t_core.clj:72)
+    Expected: {:root {:key 80, :left {:key 38, :left {:key 20, :left , :right , :value D}, :right {:key 72, :left , :right , :value G}, :value C}, :right {:key 101, :left {:key 100, :left , :right , :value N}, :right {:key 151, :left , :right , :value B}, :value A}, :value E}, :size 6}::bst.core.BST
+      Actual: {:root {:key 80, :left {:key 38, :left {:key 20, :left , :right , :value D}, :right , :value C}, :right {:key 101, :left {:key 100, :left , :right , :value N}, :right {:key 151, :left , :right , :value B}, :value A}, :value E}, :size 6}::bst.core.BST
+FAILURE: 1 check failed.  (But 31 succeeded.)
+Subprocess failed
+
+
+** Details for Delete value doesn't always work.
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.t-core, being replaced by: #'bst.core/find
+
+FAIL "about `delete-value` - Deletes the value properly" at (t_core.clj:81)
+    Expected: {:root {:key 50, :left {:key 20, :left , :right , :value N}, :right {:key 90, :left , :right , :value K}, :value C}, :size 3}::bst.core.BST
+      Actual: {:root {:key 50, :left {:key 20, :left , :right , :value N}, :right {:key 70, :left , :right {:key 90, :left , :right , :value K}, :value I}, :value C}, :size 3}::bst.core.BST
+FAILURE: 1 check failed.  (But 31 succeeded.)
+Subprocess failed
+
+
+** Details for Delete value decrements size too much.
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.t-core, being replaced by: #'bst.core/find
+
+FAIL "about `delete-value` - Deletes the value properly" at (t_core.clj:81)
+    Expected: {:root {:key 50, :left {:key 20, :left , :right , :value N}, :right {:key 90, :left , :right , :value K}, :value C}, :size 3}::bst.core.BST
+      Actual: {:root {:key 50, :left {:key 20, :left , :right , :value N}, :right {:key 70, :left , :right {:key 90, :left , :right , :value K}, :value I}, :value C}, :size 3}::bst.core.BST
+
+FAIL "about `delete-value` - Doesn't do anything if there is nothing" at (t_core.clj:85)
+    Expected: {:root {:key 50, :left {:key 20, :left , :right , :value C}, :right {:key 70, :left , :right , :value A}, :value F}, :size 3}::bst.core.BST
+      Actual: {:root {:key 50, :left {:key 20, :left , :right , :value C}, :right {:key 70, :left , :right , :value A}, :value F}, :size 2}::bst.core.BST
+FAILURE: 2 checks failed.  (But 30 succeeded.)
+Subprocess failed
+
+
+** Details for Add sometimes increments size too much.
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.t-core, being replaced by: #'bst.core/find
+
+FAIL "about `add` - it adds to the three properly" at (t_core.clj:40)
+    Expected: {:root {:key 25, :left , :right {:key 50, :left , :right , :value B}, :value A}, :size 2}::bst.core.BST
+      Actual: {:root {:key 25, :left , :right {:key 50, :left , :right , :value B}, :value A}, :size 3}::bst.core.BST
+
+FAIL "about `add` - it adds to the three properly" at (t_core.clj:42)
+    Expected: {:root {:key 25, :left {:key 18, :left , :right , :value C}, :right {:key 50, :left , :right , :value B}, :value A}, :size 3}::bst.core.BST
+      Actual: {:root {:key 25, :left {:key 18, :left , :right , :value C}, :right {:key 50, :left , :right , :value B}, :value A}, :size 4}::bst.core.BST
+FAILURE: 2 checks failed.  (But 30 succeeded.)
+Subprocess failed

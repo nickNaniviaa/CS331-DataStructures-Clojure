@@ -1,0 +1,9 @@
+{:rubric "cs331"
+  :slug "linked-list-lab"
+  :title "Linked List Lab"
+  :given "2014-10-12"
+  :due "2013-10-22"
+  :kind "L"
+  :category "labs"
+  :max 100
+  :order 12}

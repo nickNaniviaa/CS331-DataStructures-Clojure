@@ -1,0 +1,143 @@
+Lab report for Heap Lab - nribeiro
+Timestamp: 2015-04-20 02:25:25
+
+|  :scenario |                                   :title |                              :result | :score |
+|------------+------------------------------------------+--------------------------------------+--------|
+|    working |    Test student code vs instructor tests |                                 Pass |     45 |
+| qualifying |    Test student tests vs instructor code |                                 Pass |      5 |
+|    broke-1 |         Heap add doesn't increment size. | Pass: student tests detected errors. |     10 |
+|    broke-2 |              Move up only moves up once. | Pass: student tests detected errors. |     10 |
+|    broke-3 |           Percolate down only goes left. | Pass: student tests detected errors. |     10 |
+|    broke-4 | Percolate down right swaps never happen. | Pass: student tests detected errors. |     10 |
+|    broke-5 |           Delete doesn't decrement size. | Pass: student tests detected errors. |     10 |
+|      total |                              Total Score |                                      |    100 |
+
+Details:
+
+
+** Details for Test student code vs instructor tests
+
+All checks (48) succeeded.
+
+
+** Details for Test student tests vs instructor code
+
+All checks (21) succeeded.
+
+
+** Details for Heap add doesn't increment size.
+
+
+FAIL "about `top` - Returns the top" at (t_core.clj:15)
+    Expected: 46
+      Actual: nil
+
+FAIL "about `top` - Returns the top" at (t_core.clj:17)
+    Expected: 1
+      Actual: nil
+
+FAIL "about `delete` - Remove the root and decrements the size" at (t_core.clj:23)
+    Expected: 6
+      Actual: 0
+
+FAIL "about `delete` - Remove the root and decrements the size" at (t_core.clj:24)
+    Expected: 5
+      Actual: 0
+
+FAIL "about `delete` - Remove the root and decrements the size" at (t_core.clj:25)
+    Expected: (50 63 59 92 89 86)
+      Actual: (59 nil nil nil nil nil)
+
+FAIL "about `delete` - Remove the root and decrements the size" at (t_core.clj:26)
+    Expected: (59 63 86 92 89)
+      Actual: (59 nil nil nil nil)
+
+FAIL "about `add` - Adds one number to the Heap" at (t_core.clj:37)
+    Expected: 8
+      Actual: 0
+
+FAIL "about `add` - Adds one number to the Heap" at (t_core.clj:38)
+    Expected: 9
+      Actual: 0
+
+FAIL "about `add` - Adds one number to the Heap" at (t_core.clj:39)
+    Expected: [2 46 50 63 89 86 59 92 nil nil nil nil nil nil]
+      Actual: [2 nil nil nil nil nil nil]
+
+FAIL "about `add` - Adds one number to the Heap" at (t_core.clj:40)
+    Expected: [46 63 50 92 89 86 59 120 nil nil nil nil nil nil]
+      Actual: [120 nil nil nil nil nil nil]
+
+FAIL "about `add` - Adds one number to the Heap" at (t_core.clj:41)
+    Expected: 1
+      Actual: 0
+
+FAIL "about `add` - Adds one number to the Heap" at (t_core.clj:42)
+    Expected: 1
+      Actual: 0
+
+FAIL "about `add` - Adds one number to the Heap" at (t_core.clj:44)
+    Expected: [1 2]
+      Actual: [2 nil]
+
+FAIL "about `add` - Adds one number to the Heap" at (t_core.clj:45)
+    Expected: [2 10 3 nil]
+      Actual: [3 nil]
+FAILURE: 14 checks failed.  (But 7 succeeded.)
+Subprocess failed
+
+
+** Details for Move up only moves up once.
+
+
+FAIL "about `add` - Adds one number to the Heap" at (t_core.clj:39)
+    Expected: [2 46 50 63 89 86 59 92 nil nil nil nil nil nil]
+      Actual: [46 63 50 2 89 86 59 92 nil nil nil nil nil nil]
+FAILURE: 1 check failed.  (But 20 succeeded.)
+Subprocess failed
+
+
+** Details for Percolate down only goes left.
+
+
+FAIL "about `delete` - Remove the root and decrements the size" at (t_core.clj:25)
+    Expected: (50 63 59 92 89 86)
+      Actual: (63 59 50 92 89 86)
+
+FAIL "about `delete` - Remove the root and decrements the size" at (t_core.clj:26)
+    Expected: (59 63 86 92 89)
+      Actual: (59 86 50 92 89)
+FAILURE: 2 checks failed.  (But 19 succeeded.)
+Subprocess failed
+
+
+** Details for Percolate down right swaps never happen.
+
+
+FAIL "about `delete` - Remove the root and decrements the size" at (t_core.clj:25)
+    Expected: (50 63 59 92 89 86)
+      Actual: (50 63 50 92 89 86)
+
+FAIL "about `delete` - Remove the root and decrements the size" at (t_core.clj:26)
+    Expected: (59 63 86 92 89)
+      Actual: (50 63 50 92 89)
+FAILURE: 2 checks failed.  (But 19 succeeded.)
+Subprocess failed
+
+
+** Details for Delete doesn't decrement size.
+
+
+FAIL "about `delete` - Remove the root and decrements the size" at (t_core.clj:23)
+    Expected: 6
+      Actual: 7
+
+FAIL "about `delete` - Remove the root and decrements the size" at (t_core.clj:24)
+    Expected: 5
+      Actual: 7
+
+FAIL "about `delete` - Remove the root and decrements the size" at (t_core.clj:26)
+    Expected: (59 63 86 92 89)
+      Actual: (59 63 59 92 89)
+FAILURE: 3 checks failed.  (But 18 succeeded.)
+Subprocess failed
